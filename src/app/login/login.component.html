@@ -1,0 +1,18 @@
+<!-- <p>login works!</p> -->
+<div class="container-fluid">
+    <form (ngSubmit)="onSubmit()">
+<div>
+ <label for="email"> Email:</label>&nbsp;
+<input type="email" name="email" id="email" placeholder="Enter Email" [(ngModel)]="email" required autofocus>
+    </div>&nbsp;
+   <div>
+<label for="password">Password:</label>&nbsp;
+<input type="password" name="password" id="password" placeholder="Enter Password" [(ngModel)]="password" required>
+    </div> 
+&nbsp;
+<div>
+<button type="submit" class="btn btn-danger">Submit</button>
+</div>
+
+</form>
+</div>
