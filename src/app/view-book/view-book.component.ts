@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   styles: `
   .carousel-inner{
     box-sizing:border-box;
-    border:1px solid Gray;
+    // border:1px solid Gray;
     width:1500px;
     height:500px;
     padding:20px;
@@ -19,8 +19,30 @@ import { RouterLink } from '@angular/router';
     background-color:#225be8;
     color:#fafbfc ;
   }
+  .gallery{
+    padding:10px;
+    margin:30px;
+  }
+  div.gallery {
+  margin: 15px;
+  border: 4px solid #b9a1a1;
+  float: left;
+  width: 180px;
+  height: 250px;
+}
+div.gallery:hover{
+    border: 4px solid grey;
+}
+// // div.gallery img{
+//     width: 100%;
+//     height: 50%;
+// }
   
-  
+div.desc{
+    padding: 35px;
+    text-align: center;
+    width:100%;
+}
   
   `
 })

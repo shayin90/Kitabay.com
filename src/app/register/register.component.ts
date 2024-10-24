@@ -11,7 +11,8 @@ import { ToastrService } from 'ngx-toastr';
   styles: ``
 })
 export class RegisterComponent implements OnInit {
-   regForm! : FormGroup;
+   regForm!: FormGroup;
+   
 // name!: string;
 // email!:string;
 // password!:string;
@@ -32,7 +33,7 @@ ngOnInit(): void {
 this.regForm = this.fb.group({
 name: ['',[Validators.required]],
 email:['',[Validators.required,Validators.email]],
-password: ['',Validators.minLength(8),Validators.maxLength(12)]
+password: ['',[Validators.minLength(8),Validators.maxLength(12)]]
 
 });    
 
@@ -44,11 +45,11 @@ get email() {
   return this.regForm.controls["email"];
 }
 get password() {
-  return this.regForm.controls["password"];
+  return this.regForm.controls["password"]
 }
 onSubmit() {
   console.log('Form Submitted');
-  console.log("valid",this.regForm.valid);
+  console.log("Valid",this.regForm.valid);
   console.log('value',this.regForm.value);
   const userObj =this.regForm.value;
   console.log('UserObj:' ,userObj);
@@ -57,11 +58,14 @@ onSubmit() {
     //alert (Please fill all the details);
     this.toastr.error("Please fill all the details");
   }else {
-    const users =[];
+
+    const users = [];
     users.push(userObj);
     localStorage.setItem("USERS", JSON.stringify(users));
+
     this.toastr.success("Successfully Registered");
-    window.location.href ="/login";
+
+    window.location.href = "/login";
   }
-}
-}
+  }
+  }
