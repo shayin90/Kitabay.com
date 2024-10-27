@@ -39,14 +39,14 @@ onSubmit() {
 
 const userExits = users.find((obj:any) => obj.email == this.email && obj.password == this.password);
 if (userExits !=null) {
-  //alert ("Successfull loggedin ")
+  // alert ("Successfull loggedin ")
     this.toastr.warning("Successfully Loggedin"); //new
     localStorage.setItem("Logged_IN_USER","true");
     localStorage.setItem("EMAIL",this.email);
     
   }else{
     this.toastr.info("Invalid Login Credentials");
-    window.location.href = "/home";
+    // window.location.href = "/home";
   }
  }
 }

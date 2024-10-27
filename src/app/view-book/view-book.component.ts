@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
     // border:1px solid Gray;
     width:1500px;
     height:500px;
-    padding:20px;
+    padding:25px;
     margin:50px;
     background-color:#225be8;
     color:#fafbfc ;
@@ -24,7 +24,7 @@ import { RouterLink } from '@angular/router';
     margin:30px;
   }
   div.gallery {
-  margin: 15px;
+  margin: 30px;
   border: 4px solid #b9a1a1;
   float: left;
   width: 180px;
@@ -42,6 +42,10 @@ div.desc{
     padding: 35px;
     text-align: center;
     width:100%;
+}
+.btn  {
+  padding:10px;
+  margin:5px;
 }
   
   `
