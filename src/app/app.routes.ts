@@ -14,7 +14,6 @@ import { BadgeComponent } from './components/badge/badge.component';
 
 export const routes: Routes = [
     {path:'home',component:HomeComponent},
-    // {path:'header',component:HeaderComponent},
     {path:'login',component:LoginComponent},
     {path:'book/:id',component:ViewBookComponent},
     {path:'register',component:RegisterComponent},

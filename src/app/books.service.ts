@@ -33,11 +33,10 @@ export class BooksService {
         },
   
   ];
-  
-  getAllBook() {
+    getAllBooks() {
     return this.books;
   }
-  getBooksById(id:number) {
+  getBookById(id:number) {
     const book= this.books.find(obj=> obj.id == id);
     return book;
   }
@@ -49,10 +48,10 @@ export class BooksService {
   }
   //Filter method returns []
   getBooksByLanguage(language:string) {
-    const filteredBooks = this.books.filter(obj =>obj.language ==language);
-    return filteredBooks;
+    const filteredBook = this.books.filter(obj =>obj.language ==language);
+    return filteredBook;
   }
-  getBookLessThanPrice(price:number){
+  getBooksLessThanPrice(price:number){
     
   }
 }

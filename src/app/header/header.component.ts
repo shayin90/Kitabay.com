@@ -25,14 +25,14 @@ font-weight:500;
   .nav-item dropdown{
     color:#FFFFFF;
     padding:15px;
-    // text-weight:500;
+    
   }
   .navbar-brand{
     transition:.1s;
     background-color:green;
     padding: 5px;
     box-shadow: 1px 5px 3px 2px white;
-    border radius:5px;
+   
     margin:10px;
 
   }

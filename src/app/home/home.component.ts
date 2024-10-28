@@ -36,7 +36,7 @@ div.gallery:hover {
 div.gallery img {
   width: 100%;
   height: 80%;
-  // border-radius:60%;
+ 
 }
 
 div.desc {
@@ -50,8 +50,7 @@ div.desc {
   margin:120px;
 }
 .grid-container {
-  // box-sizing:border-box;
-  // border:1px solid grey;
+  
   display: grid;
   grid-template-columns: 1fr 3fr; /* Sidebar takes 1/4, Content takes 3/4 of the width */
   grid-template-rows: auto 1fr auto; /* Header and Footer auto-sized, Content takes up the rest */
@@ -77,7 +76,7 @@ margin:10px;
 }
 
 .sidebar {
-  // background-color: #f4f4f4;
+ 
   padding: 30px;
   color:blue;
   width:60%;

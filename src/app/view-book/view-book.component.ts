@@ -14,7 +14,7 @@ import { BooksService } from '../books.service';
   styles: `
   .carousel-inner{
     box-sizing:border-box;
-    // border:1px solid Gray;
+    
     width:1500px;
     height:500px;
     padding:25px;
@@ -36,15 +36,11 @@ import { BooksService } from '../books.service';
 div.gallery:hover{
     border: 4px solid grey;
 }
-// // div.gallery img{
-//     width: 100%;
-//     height: 50%;
-// }
   
 div.desc{
     padding: 35px;
     text-align: center;
-    width:100%;
+  
 }
 .btn  {
   padding:10px;
@@ -62,7 +58,7 @@ constructor(private route: ActivatedRoute, private booksService: BooksService) {
   ngOnInit(): void {
 //this.movie = this.book.find(obj => obj.title == this.bookName); 
 //Find the 1st matched  element ;
-this.book = this.booksService.getBooksById(this.bookId);
+this.book = this.booksService.getBookById(this.bookId);
   }
 addToCart(book:any) {
   //create empty array always
@@ -70,14 +66,23 @@ addToCart(book:any) {
   // 1.find existing cart items and add item in that list 
   const cartItemStr= localStorage.getItem("CART");
   const cartItems = cartItemStr  !=null ? JSON.parse(cartItemStr) : [];
-  // const cartItems = cartItemStr !=null ? JSON.parse(cartItemStr) : [];
+
+  // {
+  //   "id": book.id,
+  //   "title":book.title,
+  //   "price": book.price,
+  //   "imgUrl":book.imgUrl,
+  //   numberofbook:1
+  // }
+  //add item
   cartItems.push(book);
+  //store in db
   localStorage.setItem("CART" ,JSON.stringify(cartItems));
+  //redirect to cartpage
   alert("added items to cart");
   window.location.href="/cart";
-}
+
 }
 
-// }
+}
 
-// 
