@@ -1,0 +1,37 @@
+<!-- <p>cart works!</p> -->
+ <h3>My Cart </h3>
+
+ <!-- {{ cartItems | json}} -->
+
+ <table class="table table-bordered">
+<thead>
+<tr>
+<th>Book Poster</th>
+<th>Book Title </th>
+<th>Price</th>
+<th>Number of Books</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+    @if (cartItems) {
+
+
+        @for(item of cartItems;track item; let i =$index) {
+            <tr>
+            
+             <td><img src="{{item.imgUrl}}"></td>
+             <td>{{book.title}}</td>
+             <td>{{item.price | currency:"INR"}}</td>
+             <td><input type="number" value= " {{item.numberofbooks}}"></td>
+             <td><input type="date" name=" " id=" "></td>
+             <td><a routerLink="/payment"  class= "btn brn-info">Pay</a></td>
+             &nbsp;
+             <td><button class="btn btn-danger" (click)="removeItem(i)">Delete</button></td>
+            </tr>
+        }
+    }
+</tbody>
+ </table>
+ <button class="btn btn-danger" (click)="clearcart()"> EmptyCart</button>

@@ -1,1 +1,18 @@
 <p>book-card works!</p>
+<!-- @for (book of books;track book)-->
+ <div class="{{book.imgUrl }}" >
+    <div class="card-body">
+        <h5 span class="card-title">{{book.title}}</h5>
+        <p class="card-text">{{book.description}} </p>
+
+        {{book.language}}
+
+        <!-- <span class="badge text-bg-primary">{{book.language}}</span> -->
+         <span class="badge text-bg-success">{{book.price | currency: 'INR'}}</span>
+         &nbsp;&nbsp;
+         <br/>
+         <br/>
+         <a routerLink="{{book.id}}" class="btn btn-warning"> View</a>
+    </div>
+
+ </div>

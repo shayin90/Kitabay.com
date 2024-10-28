@@ -1,5 +1,31 @@
 <!-- <p>view-book works!</p> -->
- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<div class="container-fluid">
+<h1>Books - {{book?.title}}</h1>
+<div class="row">
+  @if(book) {
+    <div class="card col-3 book-card">
+      <img src="{{book.imgUrl}}" class=" card-img-top" alt="">
+      <div class="card-body">
+      <h4 span class="card-title">{{book.title}}</h4>
+      <span class="badge text-bg-warning">{{book.description}}</span><br/>
+      <span class="badge text-bg-success">{{book.language}}</span>&nbsp;
+
+<app-badge color="green">{{book.price | currency:'INR'}}</app-badge >
+
+  <a routerLink="{{book.title}}" class="btn btn-info">Book ur Books</a>
+
+  <a class="btn btn-danger" (click)="addToCart(book)">Add To Cart</a>
+      </div>
+
+
+    </div>
+  }
+</div>
+</div>
+ 
+ 
+ 
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <h2>BOOKS NEW-ARRIVALS</h2>
@@ -47,6 +73,8 @@
 <p>Rs.595 </p>
 </div>
 </div>
+
+
 
 <!-- 
 <div class="gallery">

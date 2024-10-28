@@ -4,9 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BooksService {
-  getAllBooks(): any[] {
-    throw new Error('Method not implemented.');
-  }
+  
 
   constructor() { }
 
@@ -34,8 +32,8 @@ export class BooksService {
         price:2000
         },
   
-
   ];
+  
   getAllBook() {
     return this.books;
   }

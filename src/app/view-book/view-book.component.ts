@@ -1,12 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { BadgeComponent } from "../components/badge/badge.component";
+import { PageComponent } from '../components/page/page.component';
+import { BooksService } from '../books.service';
 
 @Component({
   selector: 'app-view-book',
   standalone: true,
-  imports: [CommonModule,RouterLink,FormsModule],
+  imports: [CommonModule, RouterLink, FormsModule, BadgeComponent,PageComponent],
   templateUrl: './view-book.component.html',
   styles: `
   .carousel-inner{
@@ -50,6 +53,31 @@ div.desc{
   
   `
 })
-export class ViewBookComponent {
-
+export class ViewBookComponent implements OnInit {
+bookId!: number;
+book:any;
+constructor(private route: ActivatedRoute, private booksService: BooksService) {
+  this.bookId = this.route.snapshot.params["id"];
 }
+  ngOnInit(): void {
+//this.movie = this.book.find(obj => obj.title == this.bookName); 
+//Find the 1st matched  element ;
+this.book = this.booksService.getBooksById(this.bookId);
+  }
+addToCart(book:any) {
+  //create empty array always
+  //const cartItems = [];
+  // 1.find existing cart items and add item in that list 
+  const cartItemStr= localStorage.getItem("CART");
+  const cartItems = cartItemStr  !=null ? JSON.parse(cartItemStr) : [];
+  // const cartItems = cartItemStr !=null ? JSON.parse(cartItemStr) : [];
+  cartItems.push(book);
+  localStorage.setItem("CART" ,JSON.stringify(cartItems));
+  alert("added items to cart");
+  window.location.href="/cart";
+}
+}
+
+// }
+
+// 

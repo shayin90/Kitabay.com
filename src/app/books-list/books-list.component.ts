@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { BooksService } from '../books.service';
+import { BookCardComponent } from "../components/book-card/book-card.component";
 
 @Component({
   selector: 'app-books-list',
   standalone: true,
-  imports: [RouterLink,CommonModule,FormsModule],
+  imports: [RouterLink, CommonModule, FormsModule, BookCardComponent],
   templateUrl: './books-list.component.html',
   styles: ``
 })

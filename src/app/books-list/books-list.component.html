@@ -51,9 +51,9 @@
 </form> 
 </div>  
      
-     
     </div>
-    <!-- <div class="card col-9">
+    <br/>
+    <div class="card col-9">
         <div class="row">
 
           <nav aria-label="breadcrumb">
@@ -85,9 +85,15 @@
                 
                   
             </ol>
-            </nav> -->
+            </nav>
 
-           
+      <div class="row">
+        @for(b of book;track b){
+<app-book-card [book]="b" class="col-3">
+  
+</app-book-card>
+        }
+      </div>     
 
     
 
