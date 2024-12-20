@@ -1,94 +1,90 @@
-<!-- <p>books works!</p> -->
-
-<!-- <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">Home</li>
-    </ol>
-  </nav> -->
+<!-- <p>books-book works!</p> -->
+<div class="container-fluid">
+  <h3>Books</h3>
+  <p>Buy all kinds of books online from Odyssey. Including Fiction, Nonfiction, Self-help, Biographies, Management, etc.</p> <p>There is also a good range of Children's and Young adult titles. We also have all popular Tamil novels.</p>
+  <hr/>
   
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">Home</li>
-      <li class="breadcrumb-item active" aria-current="page">Books Collection</li></ol>
-  </nav>
+  <div class="title">
+  <!-- <p>Showing 1-24 of 24330 products</p>
+  <p>Display:24 per pages</p> -->
+  </div>
   
-  <!-- <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item"><a href="#">Books</a></li>
-      <li class="breadcrumb-item active" aria-current="page">View-Books</li>
-    </ol>
-  </nav> -->
+  <div class="container">
+      <div class="row">
+        @for(book of books;track book.id){
 
+          <div class="column">
+            <button class="btn btn-danger" *ngIf="book.discountPercentage">Save{{book.discountPercentage}}%</button>
+            <img src="{{book.imgURL}}" alt="Snow" style="width:100%">
+            <p>{{book.title}}</p>
+            <br/>
+            <!-- <p><span style="color:#088c39;"><h5>Rs.{{book.discountedPrice}}</h5></span></p> <p><del><small>Rs.{{book.price}}</small></del></p> -->
+            <a href ="/cart" class="btn btn-danger">Addtocart</a> 
+            <!-- <button class="btn btn-danger">Add to cart</button> -->
+          </div>
+        }
+          
+          <!-- <div class="column">
+            <button class="btn btn-danger">Save15%</button>
+            <img src="https://odyssey.in/cdn/shop/files/9780571284047_300x.jpg?v=1730297410" alt="Snow" style="width:100%">
+            <p>HULLABALOO IN THE GUAVA ORCHARD</p>
+            <p><span style="color:#088c39;"><h5>Rs.468</h5></span></p> <p><del><small>Rs.599</small></del></p>
+            <button class="btn btn-danger">Add to cart</button>
+          </div>
+
+          <div class="column">
+            <button class="btn btn-danger">Save15%</button>
+            <img src="https://odyssey.in/cdn/shop/files/9780140127232_bd397b23-a5fa-4302-8207-ef3d9838b736_300x.jpg?v=1730297199" alt="Snow" style="width:100%">
+           <p>THAT LONG SILENCE</p>
+           <p><span style="color:#088c39;"><h5>Rs.213</h5></span></p> <p><del><small>Rs.250</small></del></p>
+           </div>
   
-
-  <h3>Books Collections</h3>
-
-
-<div id="container">
-  <div class="row">
-    <div class="coloumn">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUAiJaFDuamPyFPlnIBY04rbgb62vun7X6Mg&s" >
-  <h5>Books</h5>
+    <div class="column">
+      <button class="btn btn-danger">Save15%</button>
+      <img src="https://odyssey.in/cdn/shop/files/9780571260645_300x.jpg?v=1730296934" alt="Snow" style="width:100%">
+      <p>DIFFICULT DAUGHTERS</p>
+      <p><span style="color:#088c39;"><h5>Rs.468</h5></span></p> <p><del><small>Rs.550</small></del></p>
     </div>
-
-  <div class="coloumn">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiPOhR-A0xw3Wau3U0azx6wkVixwe8uXdk4w&s" >
-  <h5>Books-New Arrivals</h5>
-</div>
-
-  <div class="coloumn">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJ5gnOnkHeDufv5rFZsBcHtCbxEFQfyJyAw&s" >
-   <h5>Books- Best Sellers</h5>
+  
+    <div class="column">
+      <button class="btn btn-danger">Save15%</button>
+      <img src="https://odyssey.in/cdn/shop/files/9789350292105_130x.jpg?v=1730296649" alt="Snow" style="width:100%">
+      <p>THE TWENTIETH WIFE</p>
+      <p><span style="color:#088c39;"><h5>Rs.424</h5></span></p> <p><del><small>Rs.499</small></del></p>
+    </div>
+  
+    <div class="column">
+      <button class="btn btn-danger">Save15%</button>
+      <img src="https://odyssey.in/cdn/shop/files/9780143423904_c44af3d7-d2fc-4f1a-97a2-0bdeb053e8ed_300x.jpg?v=1730296358" alt="Snow" style="width:100%">
+      <p>THE INHERITANCE OF LOSS</p>
+      <p><span style="color:#088c39;"><h5>Rs.339</h5></span></p> <p><del><small>Rs.399</small></del></p>
+    </div>
+  
+    <div class="column">
+      <button class="btn btn-danger">Save15%</button>
+      <img src="https://odyssey.in/cdn/shop/files/9780674295988_300x.jpg?v=1730292409" alt="Snow" style="width:100%">
+      <p>TATA THE GLOBAL CORPORATION</p>
+      <p><span style="color:#088c39;"><h5>Rs.509</h5></span></p> <p><del><small>Rs.599</small></del></p>
+    </div>
+  
+    <div class="column">
+      <button class="btn btn-danger">Save15%</button>
+      <img src="https://odyssey.in/cdn/shop/files/9789385827297_5d92ea3a-aee3-4eee-bbd3-bb389bba4667_300x.jpg?v=1730291635" alt="Snow" style="width:100%">
+      <p>THE WIT AND WISDOM OF RATAN TATA</p>
+      <p><span style="color:#088c39;"><h5>Rs.339</h5></span></p> <p><del><small>Rs.399</small></del></p>
+  <button type="button" class="btn btn-danger">Danger</button> -->
+  
+    </div> 
+    <!-- <button type="button" class="btn btn-danger">Danger</button> -->
+  
+  
+  
+  
+  
+  
+  
+  
+    </div>
+    
   </div>
-
-<div class="coloumn">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS99bvUjYHvdLtIVwDnFYLvFexCojvCmHHVPg&s" >
-   <h5>Action and Adventures</h5>
-  </div>
-
-<div class="coloumn">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC8obB-kXUiakT0IMhGqswO-vkGit7sxGCeQ&s" >
-    <h5>Adult Colouring Books </h5>
-  </div>
-<div class="coloumn">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRj--2jtNBA2MkNESU6qdyYONsPByQKClxOg&s" >
-    <h5>Classics</h5>
-  </div>
-
-<div class="coloumn">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq1oI7hz-c7-YK-m_O0IGRC_3wSDQrRrdNdA&s" >
-    <h5>Biographies & Autobiographies</h5>
-  </div>
-
-
-  <div class="coloumn">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJAwC2Q2XUV96ny0PVlY_SKYPbpnc7cmiDiw&s" >
-    <h5>Business & Management </h5>
-  </div>
-
-
-  <div class="coloumn">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn3wbzpiMPhsdFtplPC7vo3lBnxyc4rNUug&s" >
-    <h5>Children's Books</h5>
-   </div>
-
-  <div class="coloumn">
-   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2qsPp0z8lEB1VresNK0g9Xgkrp6RysA7B9A&s" >
-    <h5>Health & Fitness</h5>
-  </div>
-
-  <div class="coloumn">
-    <img src="https://nextbooks.nextcurriculum.in/product-images/1.jpg/1010810000000197863/600x600" >
-    <h5>Tamil Books</h5>
-  </div>
-
-  <div class="coloumn">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1oWLQ-4Y2-1K-U-vm7I41Z_wA0e76m50zxg&s" >
-    <h5>Self Help</h5>
-  </div> 
-  </div>
-</div>
-
-
-
+ 

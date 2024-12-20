@@ -8,7 +8,37 @@ import { ToastrService } from 'ngx-toastr';
   standalone: true,
   imports: [CommonModule,FormsModule],
   templateUrl: './login.component.html',
-  styles: ``
+  styles: `
+  .container-fluid{
+    box-sizing:border-box;
+    border:2px solid green;
+    align-items:center;
+    width:25%;
+    height:350px;
+
+
+}
+h3{
+  text-align:center;
+  padding:5px;
+  color:#1313f6;
+}
+*{
+  background-color:#cce9b7;
+  z-index:-1;
+}
+label{
+  padding:25px;
+  width:95px;
+  color:#943126;
+}
+.btn btn-outline-success {
+  margin:40px;
+  padding:30px;
+  align-items:center;
+
+}
+  `
 })
 export class LoginComponent {
 email!: string;

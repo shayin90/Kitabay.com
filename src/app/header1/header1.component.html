@@ -1,0 +1,143 @@
+
+<!--
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+    <a class="navbar-brand1" href="#"><h6><marquee direction = "left">LIMITED TIME OFFER - Get 1 SURPRISE BOOK FREE + 5% EXTRA OFF ON ALL PREPAID ORDER ABOVE Rs.599.USE COUPON- GET1FREE</marquee></h6></a>
+    </div>
+  </nav>
+
+ 
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1"><img src="assets/images/Kitabay.png"  width="150px height=100px"></span>
+
+      <div class="container">
+      <form action="#" class="form">
+      <i class="fas fa-search form__icon "></i>
+      <input type="text" name="search" class="form__input"  placeholder="    Search" >
+          
+      </form>
+       
+        <ul class="nav justify-content-end">
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/cart" aria-current="cart"> Cart
+        &nbsp;&nbsp;<i class="bi bi-cart"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+        </svg></i> </a>
+            
+           
+          </li>
+          <ul class="nav-item" *ngIf="!isLoggedIn">
+            <li class="nav-link" aria-current="page" routerLink="/login">            
+              <i class="fa fa-lock"></i>
+              &nbsp;&nbsp;Login</li>
+
+            <li class="nav-item" *ngIf="!isLoggedIn">
+              <a class="nav-link" routerLink="/register">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-square" viewBox="0 0 16 16">
+                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                  <path d="M5.795 12.456A.5.5 0 0 1 5.5 12V4a.5.5 0 0 1 .832-.374l4.5 4a.5.5 0 0 1 0 .748l-4.5 4a.5.5 0 0 1-.537.082"/>
+                </svg>Register</a>
+            </li>
+            
+            <li class="nav-item" *ngIf="isLoggedIn">
+              <a class="nav-link">Welcome User !!!</a>
+            </li>
+
+            <li class="nav-item" *ngIf="isLoggedIn">
+              <a class="nav-link" (click)="logout()">Logout</a>
+            </li>
+          
+          </ul>
+   
+  </ul>
+</div> 
+    </div>
+  </nav>
+ -->
+  
+ <!-- <div id="navbar">
+  <a href="#default" id="logo"><img src="assets/images/Kitabay.png"  width="150px height=100px">
+  <h2>Kitabay.Com</h2>
+</a>
+  <div id="navbar-right">
+    <a class="active" href="#home">
+      <div class="container">
+      <form action="#" class="form">
+      <i class="fas fa-search form__icon "></i>
+      <input type="text" name="search" class="form__input"  placeholder="Search" >
+          
+      </form>
+      </div>
+    </a>
+
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+
+</div>  -->
+
+
+<div id="navbar">
+  <a href="#default" id="logo">
+    <h2>Kitabay.Com</h2>
+    <img src="https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?ga=GA1.1.240046061.1732886859&semt=ais_hybrid=" width="150px">
+   
+    </a>
+
+  <div id="navbar-right">
+    <nav class="navbar bg-body-tertiary">
+      
+  
+        <div class="container">
+        <form action="#" class="form">
+        <i class="fas fa-search form__icon "></i>
+        <input type="text" name="search" class="form__input"  placeholder="Search" >
+            
+        </form>
+         
+          <ul class="nav justify-content-end">
+          <li class="nav-item">
+          <a class="nav-link" routerLink="/cart" aria-current="cart"> Cart
+          &nbsp;&nbsp;<i class="bi bi-cart"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg></i> </a>
+              
+             
+            </li>
+            <ul class="nav-item" *ngIf="!isLoggedIn">
+              <li class="nav-link" aria-current="page" routerLink="/login">            
+                <i class="fa fa-lock"></i>
+                &nbsp;&nbsp;Login</li>
+  
+              <li class="nav-item" *ngIf="!isLoggedIn">
+                <a class="nav-link" routerLink="/register">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-square" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                    <path d="M5.795 12.456A.5.5 0 0 1 5.5 12V4a.5.5 0 0 1 .832-.374l4.5 4a.5.5 0 0 1 0 .748l-4.5 4a.5.5 0 0 1-.537.082"/>
+                  </svg>Register</a>
+              </li>
+              
+              <li class="nav-item" *ngIf="isLoggedIn">
+                <a class="nav-link">Welcome User !!!</a>
+              </li>
+  
+              <li class="nav-item" *ngIf="isLoggedIn">
+                <a class="nav-link" (click)="logout()">Logout</a>
+              </li>
+            
+            </ul>
+     
+    </ul>
+  </div> 
+ 
+    </nav> 
+    <a class="active" href="/login">Login</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+
+
+
+

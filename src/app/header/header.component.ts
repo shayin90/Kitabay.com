@@ -9,80 +9,55 @@ import { ToastrService } from 'ngx-toastr';
   imports: [CommonModule,RouterLink],
   templateUrl: './header.component.html',
   styles: `
+
+  * {
+  box-sizing: border-box;
+}
+  h6{
+    padding:10px;
+    background-color:#acb7e0;
+    color:#0b14de ;
+  }
   .container-fluid{
-    background-color:#800000;
+    background-color:#96c49e    ;
     color:#FFFFFF;
     text-weight:1000;
     list-style:none;
-    padding:15px;
+    height:120px;
   }
-  .dropdown-menu{
-    color:#00F;
-font-weight:500;
-    padding:10px;
-    margin:10px;
-  }
-  .nav-item dropdown{
-    color:#FFFFFF;
-    padding:15px;
-    
-  }
+  
+  
   .navbar-brand{
     transition:.1s;
-    background-color:green;
     padding: 5px;
-    box-shadow: 1px 5px 3px 2px white;
-   
-    margin:10px;
+    box-shadow: 15px 5px 10px 10px  white;
+    margin:120px;
+    width:150px;
 
   }
- .container.example {
-    width:250px;
-    margin:250px;
-  }
- * {
-  box-sizing: border-box;
-}
+  .nav-link{
+  color:#edeef2 ;
+  margin:10px;
+ font-weight:500;
+text-align:center;
+ width:100%;
+height:10px;
 
-/* Style the search field */
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 50%;
-  background: #f1f1f1;
-}
-
-/* Style the submit button */
-form.example button {
-  float: left;
-  width: 5%;
-  padding: 10px;
-  background: black;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-
-form.example button:hover {
-  background: #0b7dda;
-}
-
-/* Clear floats */
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.nav-link {
-  padding:10px;
-  color:#ffF;
-  margin:60px;
   
 }
+/* Style the search field */
+form.example input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: 1px solid black;
+  float: left;
+  width: 40%;
+  background: #f1f1f1;
+  border-radius:20px;
+  margin-left:200px;
+}
+
+
   `
 })
 export class HeaderComponent implements OnInit {

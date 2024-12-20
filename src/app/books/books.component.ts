@@ -1,81 +1,114 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-books',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './books.component.html',
   styles: `
-  .breadcrumb-item{
-    color:blue;
-  }
-  
-.coloumn {
-  float: left;
-  
-  padding: 10px;
-}
-.coloumn img {
-  opacity: 0.8;
-  cursor: pointer;
-  width: 450px;
-  height:350px;
-  }
+.container-fluid {
+  box-sizing:border-box;
+  border:1px solid #ccc;
+  width:90%;
+  height:25%;
 
-.coloumn img:hover {
-  opacity: 1;
 }
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+ p{
+    color:blue;
+    margin:5px;
+  }
+  .title{
+    padding:10px;
+  }
+  
+  .container .btn {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 16px;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
 }
-  h5{
-  color:blue;
-  text-align:left;
-  padding:20px;
-  margin:15px;
-}
-h3{
-  color:blue;
-  text-align:center;
+
+.container .btn:hover {
+  background-color: black;
 }
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-/* The grid: Four equal columns that floats next to each other */
 .column {
   float: left;
-  width: 25%;
+  width: 23.33%;
   padding: 10px;
+  height:500px;
 }
 
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.8; 
-  cursor: pointer; 
-  float:left;
-}
-
-.column img:hover {
-  opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
+/* Clearfix (clear floats) */
+.row::after {
   content: "";
-  display: table;
   clear: both;
+  display: table;
+  box-sizing:border-box;
+  border:1px solid #ccc;
 }
+.container .img {
+  box-sizing:border-box;
+  border:2px solid #ccc;
+  height:500px;
+  width:150px;
+  float:left;
+  
+}
+
 
 `
 })
 export class BooksComponent {
+books:any=[
+  {
+    "id" :1,
+    "title" : "nexus",
+    "price": 500,
+    "discountedPrice": 400,
+    "discountPercentage": 20,
+    "imgURL": "https://odyssey.in/cdn/shop/files/9781464243868_500x.jpg?v=1730286300",
+  },
 
+  {
+    "id" :2,
+    "title" : "Kill gandhi",
+    "price": 500,
+    "discountedPrice": 400,
+    "imgURL": "https://odyssey.in/cdn/shop/products/sddf_500x.jpg?v=1633177458",
+  },
+
+  {
+    "id" :3,
+    "title" : "Kutti Kathaigal",
+    "price": 198,
+    "discountedPrice": 180,
+    "imgURL": "https://odyssey.in/cdn/shop/files/9789348561763_300x.jpg?v=1733214190",
+  },
+
+  {
+    "id" :4,
+    "title" : "Orbital",
+    "price": 0,
+    "discountedPrice": 468,
+    "imgURL": "https://odyssey.in/cdn/shop/files/ORBITAL_300x.jpg?v=1732457329",
+  }
+
+
+]
 }

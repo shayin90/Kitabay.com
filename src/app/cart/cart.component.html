@@ -10,8 +10,8 @@
 <th>Book Title </th>
 <th>Price</th>
 <th>Number of Books</th>
-<th></th>
-<th></th>
+<th>Date of Purchase</th>
+<th>Date of Delivery</th>
 </tr>
 </thead>
 <tbody>
@@ -22,11 +22,11 @@
             <tr>
             
              <td><img src="{{item.imgUrl}}"></td>
-             <td>{{book.title}}</td>
+             <td>{{item.title}}</td>
              <td>{{item.price | currency:"INR"}}</td>
-             <td><input type="number" value= " {{item.numberofbooks}}"></td>
-             <td><input type="date" name=" " id=" "></td>
-             <td><a routerLink="/payment"  class= "btn brn-info">Pay</a></td>
+             <td><input type="number" value= "{{item.numberofbooks}}"></td>
+             <td><input type="date" name="" id=""></td>
+             <td><a routerLink="/payment"  class= "btn btn-info">Pay</a></td>
              &nbsp;
              <td><button class="btn btn-danger" (click)="removeItem(i)">Delete</button></td>
             </tr>

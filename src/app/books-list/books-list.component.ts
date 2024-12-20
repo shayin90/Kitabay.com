@@ -4,20 +4,33 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { BooksService } from '../books.service';
 import { BookCardComponent } from "../components/book-card/book-card.component";
+import { PageComponent } from "../components/page/page.component";
 
 @Component({
   selector: 'app-books-list',
   standalone: true,
-  imports: [RouterLink, CommonModule, FormsModule, BookCardComponent],
+  imports: [RouterLink, CommonModule, FormsModule, BookCardComponent, PageComponent],
   templateUrl: './books-list.component.html',
-  styles: ``
+  styles: `
+  .col-3 {
+    margin-right:5px;
+    float:left;
+    padding:10px;
+   margin:40px;
+  // //  box-sizing:border-box;
+  //  border:1px solid grey;
+//  margin-top:15px;
+
+  }
+  `
 })
 export class BooksListComponent implements OnInit {
-  book!: any[];
+
+  books!: any[];
   
   language!: string;
  
-  bookType!:string;
+  bookType!: string;
    
   price!: number;
 
@@ -33,11 +46,11 @@ export class BooksListComponent implements OnInit {
   }
 ngOnInit(): void {
   console.log("OnInit method called");
-  this.book= this. booksService.getAllBooks();
-  console.log('book', this.book);
+  this.books = this .booksService.getAllBooks();
+  console.log('book', this.books);
 }
 reset() {
-  this.book= this.booksService.getAllBooks();
+  this.books= this.booksService.getAllBooks();
 }
 applyFilter() {
   alert("language:" +this.language);
@@ -47,21 +60,21 @@ applyFilter() {
   if (this.language) {
 
   
-    this.book = this.book.filter(obj=> obj.language == this.language);
+    this.books= this.books.filter(obj=> obj.language == this.language);
   }
 
   //if bookType is selected
   if (this.bookType) {
-    this.book = this.book.filter(obj=> obj.description.includes(this.bookType))
+    this.books = this.books.filter(obj=> obj.description.includes(this.bookType))
   }
 //if price filter is applied 
 
-if (this.bookType) {
-  this.book = this.book.filter(obj =>obj.price > this.minPrice && obj.price <=this.maxPrice);
-  console.log('price.filter');
-  console.table('this.book');
-}
+   if(this.minPrice && this.maxPrice) {
+      this.books = this.books.filter(obj => obj.price > this.minPrice && obj.price <=this.maxPrice);
+      console.log('price filter');
+      console.table('this.books');
     
+    }
 }
 }
 

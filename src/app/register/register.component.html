@@ -1,6 +1,6 @@
 
  <div class="container-fluid">
-    <h3>Register Using Reactive Forms</h3>
+    <h3>Register </h3>
     <form (ngSubmit)="onSubmit()" [formGroup]="regForm" class="needs-validation was-validated" novalidate>
     
         <div>
@@ -22,7 +22,7 @@
     <br/>
         <div>
         <label for="password" class="form-label">Password:</label>&nbsp;
-        <input type="password" name="password" id="password" placeholder="enter password" formControlName="password" required class="form-control">
+        <input type="password" name="password" id="password" placeholder="Enter password" formControlName="password" required class="form-control">
         <div *ngIf="password.dirty && password.errors" class="invalid-feedback">
        <small *ngIf="password.errors?.['required']" class="invalid-feedback">Password is required</small>
        <small *ngIf="password.errors?.['minLength']" class="invalid-feedback">Password is must have minimum 8 characters</small>
@@ -36,7 +36,7 @@
         <div>
             <button type="submit"  [disabled]="!regForm.valid" class="btn btn-success">Submit</button>
 
-            {{regForm.invalid}},-{{regForm.valid}}
+            <!-- {{regForm.invalid}},-{{regForm.valid}} -->
         </div>
         
         </form>

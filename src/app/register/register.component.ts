@@ -8,7 +8,27 @@ import { ToastrService } from 'ngx-toastr';
   standalone: true,
   imports: [CommonModule,FormsModule,ReactiveFormsModule],
   templateUrl: './register.component.html',
-  styles: ``
+  styles: `
+  .container-fluid{
+    box-sizing:border-box;
+    border:2px solid green;
+    align-items:center;
+    width:25%;
+    height:450px;
+    padding:15px;
+}
+h3{
+  text-align:center;
+  padding:5px;
+  color:#1313f6;
+  
+}
+*{
+  background-color:#bff3f3 ;
+  z-index:-1;
+}
+  
+  `
 })
 export class RegisterComponent implements OnInit {
    regForm!: FormGroup;

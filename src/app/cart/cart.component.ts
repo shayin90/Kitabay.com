@@ -7,7 +7,13 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [CommonModule,RouterLink],
   templateUrl: './cart.component.html',
-  styles: ``
+  styles: `
+  .table.imgUrl {
+    height:200px;
+  }
+  
+  
+  `
 })
 export class CartComponent {
 cartItems!: any[];

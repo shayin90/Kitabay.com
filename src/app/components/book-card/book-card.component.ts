@@ -7,7 +7,16 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [CommonModule,RouterLink],
   templateUrl: './book-card.component.html',
-  styles: ``
+  styles: `
+  // .card {
+  //   box-sizing:border-box;
+  //   border:1px solid grey;
+  //   // width:23.33%;
+
+  // }
+
+
+  `
 })
 export class BookCardComponent {
 @Input() book:any; // anyone who is using this component , must pass input attribute
